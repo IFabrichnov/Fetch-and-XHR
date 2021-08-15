@@ -12,7 +12,7 @@
 
 Это достигается с помощью таких API, как **XMLHttpRequest** или - более новой - **Fetch API.** Эти технологии позволяют веб-страницам напрямую обрабатывать запросы HTTP для определённых ресурсов, доступных на сервере, и форматировать результирующие данные по мере необходимости перед их отображением.
 
-![2](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/2.jpg)
+![2](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/2.jpg)
 
 Справа AJAX модель. Вначале с помощью JavaScript создаем обработчик и отправяем данные через HTTP, далее, когда сервер их обработает, он отправляет пользователю ответ в виде XML, обработчик AJAX сразу обрабатывает ланные. 
 
@@ -47,7 +47,7 @@ xhr.onload = () => {
 xhr.send() 
 ```
 
-![3](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/3.jpg)
+![3](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/3.jpg)
 
 При просмотре консоли, получаем те данные, которые нам были нужны. Но получаем не объект, а строку. Поэтому, чтобы получить объект, нам надо передать объекту **xhr**, что надо распарсить ответ.
 
@@ -131,7 +131,7 @@ sendRequest('GET', requestURL)
     .then(data => console.log(data))
     .catch(err => console.log(err))
 ```
-![4](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/4.jpg)
+![4](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/4.jpg)
 
 Видим, что все работает и получаем нужные нам данные. 
 
@@ -183,7 +183,7 @@ function sendRequest(method, url, body = null) {
 ```
 Теперь все работает. Таким образом мы можем отправлять асинхронные запросы без библиотек, с базовым **XHR**.
 
-![5](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/5.jpg)
+![5](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/5.jpg)
 
 ## Fetch
 
@@ -202,7 +202,7 @@ sendRequest('GET', requestURL)
 ```
 Смотрим, что сейчас выдает консоль.
 
-![6](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/6.jpg)
+![6](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/6.jpg)
 
 На данный момент мы получаем не совсем то, что хотели бы видеть (массив пользователей), а объект **Response**. 
 Чтобы это исправить, можно *зачейнить* метод **fetch** с помощью **.then**, получить *response* (то, что получили и сервера, но обернуто в Fetch API) и у *response* можем вызываем метод **json** который распарсит наши данные в нужный нам формат.
@@ -216,7 +216,7 @@ function sendRequest(method, url, body = null) {
 ```
 Теперь получаем готовый набор объектов.
 
-![7](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/7.jpg)
+![7](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/7.jpg)
 
 **Метод 'POST'**
 
@@ -250,14 +250,14 @@ sendRequest('POST', requestURL, body)
 
 И если мы заглянем в консоль, то увидим, что метод **POST** работает.
 
-![8](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/8.jpg)
+![8](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/8.jpg)
 
 
 ## Пример получения данных с сервера без перезагрузки страницы с помощью Fetch
 
 *Чтобы запустить проект, нужно перейти по ссылке на gh-pages:* [ссылка на проект](https://ifabrichnov.github.io/Dynamic-rate-of-cryptocurrencies/ "ссылка на проект")
 
-![9](https://github.com/IFabrichnov/Fetch-and-XHR/tree/main/README-IMG/9.jpg)
+![9](https://github.com/IFabrichnov/Fetch-and-XHR/blob/main/README-IMG/9.jpg)
 
 ## Пошаговое написание кода
 
