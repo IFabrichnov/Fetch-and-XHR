@@ -22,7 +22,7 @@ const firstDataItems = (el) => {
     }
 };
 
-//создание строки с конентом
+//создание таблицы с контентом
 const createTable = (el, key) => {
 
     const row1 = document.createElement('td');
